@@ -1,0 +1,68 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%            Для компиляции только в XeTeX         %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+%%% подключение цветов и графики (желательно сохранять именно такой порядок)
+%%%
+
+% -------------------------------------------------------
+% Картинки
+% -------------------------------------------------------
+
+	\usepackage{graphicx} 
+	\usepackage{epsfig}
+	
+	\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+	
+% Keeps floats `in their place', preventing them from floating past a
+% "\FloatBarrier" command into another section.  The floats should not move
+% past every "\section".
+\usepackage[section]{placeins}
+
+% Useful for individually placing figures on a separate page with
+% \afterpage{\clearpage \begin{figure}[p] ... }
+\usepackage{afterpage}
+
+
+\newcommand{\fcaption}[1]{{\captionsetup{skip=12pt,justification=centering,singlelinecheck=false}\caption{#1}}}
+\newenvironment{figured}
+	{
+			\begin{figure}[H]
+				\begin{center}
+	}
+	{
+				\end{center}
+			\end{figure}
+			
+	}
+
+
+	
+% -------------------------------------------------------
+% Цвета
+% -------------------------------------------------------	
+
+	\usepackage[usenames]{xcolor}
+	
+	\newcommand{\red}[1]{\textcolor{red}{#1}}
+	\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+	\newcommand{\gray}[1]{\textcolor{gray}{#1}}
+	\newcommand{\yb}[1]{\colorbox{yellow}{#1}}
+		
+% -------------------------------------------------------
+% Векторные рисунки
+% -------------------------------------------------------	
+	\usepackage{pspicture}
+	\usepackage{pst-plot,pstricks-add}
+	%\usepackage{pstricks,pst-node,pst-text,pst-3d,pst-grad}	
+
+	\usepackage{tikz}
+		\usetikzlibrary{arrows,shapes,shadows,decorations}
+		\usetikzlibrary{decorations.pathmorphing}
+		\usetikzlibrary{calc}		
+
+
+
+

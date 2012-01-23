@@ -1,0 +1,670 @@
+# ТРЕБУЕТСЯ УМЕНЬШИТЬ.
+
+################################################################################
+#####
+##### ТЕХНИЧЕСКАЯ ЧАСТЬ
+#####
+################################################################################
+
+
+@phdthesis{Кан:2011,
+    author = {Кан, Д. A.},
+    title = {Применение теории компьютерной семантики русского языка и статистических методов к построению системы машинного перевода},
+    type = {Диссертация канд. ф.м. наук: 05.13.11},
+    school = {Санкт-Петербургский Государственный Университет},
+    address = {Санкт-Петербург},
+    year = 2011,
+    language = {russian}
+}
+
+@book{Шевелев:2007,
+    author = {Шевелев, О.Г.},
+    title = {Методы автоматической классификации текстов на естественном языке},
+    type = {Учеб. пособие},
+    address = {Томск},
+    publisher = {ТМЛ-Пресс},
+    year = 2007,
+    language = {russian}
+}
+
+@article{Chen:1999,
+    journal = {Computer Speech and Language},
+    author = {Chen, S.F},
+    title = {An empirical study of smoothing techniques for language modeling},
+    volume = {13},
+    number = {4},
+    year = 1999,
+    language = {english}
+}
+
+@inproceedings{Романов:2008:1,
+    booktitle = {Молодежь и современные информационные технологии: Сб. тр. VI Всерос. науч.-практ. конф. студентов, аспирантов и молодых ученых},
+    author = {Романов, А.С.},
+    title = {Подходы к идентификации авторства текста на основе n-грамм и нейронных сетей},
+    address = {Томск},
+    publisher = {Изд-во ТПУ},
+    year = 2008,
+    language = {russian}
+}
+
+@inproceedings{Романов:2008:2,
+    booktitle = {Докл. Том. гос. ун-та систем управления и радиоэлектроники},
+    author = {Романов, А.С.},
+    title = {Структура программного комплекса для исследования подходов к идентификации авторства текстов},
+    address = {Томск},
+    publisher = {Изд-во ТПУ},
+    series = {2(18)},
+    year = 2008,
+    language = {russian}
+}
+
+@inproceedings{NIST:2008,
+    booktitle = {NIST MT Evaluation Meeting},
+    author = {Koehn, P. and Schroeder, J. and Osborne, M.},
+    title = {Edinburgh University System Description for the 2008 NIST Machine Translation Evaluation},
+    publisher = {Association for Computational Linguistics},
+    year = 2008,
+    language = {english}
+}
+
+@inproceedings{Hoang:2008,
+    booktitle = {ACL Workshop on Software engineering, testing, and quality assurance for NLP 2008},
+    author = {Hoang, H. and Koehn, P.},
+    title = {Design of the Moses Decoder for Statistical Machine Translation},
+    publisher = {Association for Computational Linguistics},
+    year = 2008,
+    language = {english}
+}
+
+@book{Koehn:2007,
+    author = {Koehn, P. and others},
+    title = {Moses: Open Source Toolkit for Statistical Machine Translation},
+    publisher = {Association for Computational Linguistics},
+    year = 2007,
+    language = {english}
+}
+
+@inproceedings{Koehn:2004,
+    booktitle = {Talk given at PARC, Google, ISI, MITRE, BBN,},
+    author = {Koehn, P.},
+    title = {Challenges in Statistical Machine Translation},
+    organization = {Univ. of Montreal},
+    year = 2004,
+    language = {english}
+}
+
+@inproceedings{Knight-Koehn:2004,
+    booktitle = {Tutorial at AMTA 2004},
+    author = {Knight, K. and Koehn, P.},
+    title = {Introduction to Statistical Machine Translation},
+    publisher = {Association for Computational Linguistics},
+    year = 2004,
+    language = {english}
+}
+
+
+@inbook{Koehn:2011,
+    booktitle = {Handbook of Natural Language Processing and Machine Translation},
+    author = {Koehn, P. and Hoang H.},
+    title = {Factored Translation Models},
+    editors = {Olive and  Christianson and McCary},
+    publisher = {Springer},
+    year = 2011,
+    language = {english}
+}
+
+@book{Koehn:2010,
+    author = {Koehn, P.},
+    title = {Statistical Machine Translation},
+    address = {Cambridge},
+    publisher = {Cambridge University Press},
+    year = 2010,
+    language = {english}
+}
+
+@inproceedings{DeNero:2009,
+    booktitle = {Association for Computational Linguistics 2009},
+    author = {DeNero, J. and Chiang, D. and Knight, K.},
+    title = {Fast Consensus Decoding over Translation Forests},
+    publisher = {Association for Computational Linguistics},
+    year = 2009,
+    language = {english}
+}
+
+@inproceedings{Knight-Koehn:2003,
+    booktitle = {Tutorial at MT Summit 2003},
+    author = {Knight, K. and Koehn, P.},
+    title = {Statistical Machine Translation},
+    year = 2003,
+    language = {english}
+}
+
+@inproceedings{HLT:2003,
+    booktitle = {Tutorial at HLT/NAACL 2003},
+    author = {Knight, K. and Koehn, P.},
+    title = {What's New in Statistical Machine Translation},
+    year = 2003,
+    language = {english}
+}
+
+@inproceedings{Knight:1999,
+    booktitle = {Computational Linguistics, Squibs \& Discussion},
+    author = {Knight, K.},
+    title = {Decoding Complexity in Word-Replacement Translation Models},
+    volume = {25},
+    number = {4},
+    year = 1999,
+    language = {english}
+}
+
+@inproceedings{Tmt:2003,
+    booktitle = {MT Summit IX Workshop on Teaching Machine Translation},
+    author = {K. Knight},
+    title = {Teaching Statistical Machine Translation},
+    year = 2003,
+    language = {english}
+}
+
+@inproceedings{Fast-Decoding:2003,
+    booktitle = {Artificial Intelligence},
+    author = {Germann, U. and Jahr, M. and Knight, K. and Marcu, D. and Yamada K.},
+    title = {Fast Decoding and Optimal Decoding for Machine Translation},
+    year = 2003,
+    language = {english}
+}
+
+@misc{Noon:1993,
+    author = {Noon, C. and Bean, J.C.},
+    title = {An efﬁcient transformation of the generalized traveling salesman problem.},
+    volume = {40},
+    number = {3},
+    publisher = {ACM Comput. Surv.},
+    year = 1993,
+    language = {english}
+}
+
+@inproceedings{Charniak:2003,
+    booktitle = {MT Summit IX},
+    author = {Charniak, E. and Knight, K.  and Yamada K. },
+    title = {Syntax-based Language Models for Machine Translation},
+    year = 2003,
+    language = {english}
+}
+
+@inproceedings{Потемкин:2005,
+    booktitle = {Труды ΙΙ Международной научно-практической конференции, посвященной Европейскому Дню языков},
+    author = {Потемкин, C. Б. and Кедрова, Г. Е.},
+    title = {Автоматическая оценка качества машинного перевода на основе семантической метрики},
+    address = {Луганск},
+    year = 2005,
+    language = {russian}
+}
+
+@inproceedings{Потемкин:2007,
+    booktitle = {III Международный конгресс исследователей русского языка <<Русский язык: исторические судьбы и современность>>},
+    author = {Потемкин, C. Б. and Кедрова, Г. Е.},
+    title = {Использование корпуса параллельных текстов для пополнения специализированного двуязычного словаря},
+    address = {М.},
+    year = 2007,
+    language = {russian}
+}
+
+@inproceedings{Липатов:2005,
+    booktitle = {Труды конференции <<Диалог>>},
+    author = {Липатов, A.В. and Мальцев, А. А. and Шило, В. В.},
+    title = {Автоматизация процесса построения и пополнения двуязычных специализированных словарей},
+    address = {М.},
+    year = 2005,
+    language = {russian}
+}
+
+@inproceedings{Yang:2005,
+    booktitle = {43rd Annual Meeting of the Association for Computational Linguistics},
+    author = {Yang Liu and Qun Liu and Shouxun Lin},
+    title = {Log-linear Models for Word Alignment},
+    organization = {Institute of Computing Technology Chinese Academy of Sciences},
+    publisher = {Association for Computational Linguistics},
+    address = {Beijing},
+    year = 2005,
+    language = {english}
+}
+
+@inproceedings{Germann:2003,
+    booktitle = {Conference of the North American Chapter of the Association for Computational Linguistics on Human Language Technology},
+    volume = {Volume 1},
+    author = {Germann, U.},
+    title = {Greedy decoding for statistical machine translation in almost linear time},
+    organization = {USC Information Sciences Institute, Marina del Rey},
+    publisher = {Association for Computational Linguistics},
+    address = {CA},
+    year = 2003,
+    language = {english}
+}
+
+@book{Manning:2000,
+    author = {Manning, C. D and Schuetze, H.},
+    title = {Foundations of Statistical Natural Language Processing},
+    edition = {Second printing with corrections},
+    address = {Cambridge},
+    publisher = {The MIT Press},
+    year = 2000,
+    language = {english}
+}
+
+@book{Кормалев:2005,
+    author = {Кормалев, Д.А and Сулейманова, Е.А.},
+    title = {Основы теории автоматической обработки текста},
+    type = {Конспект лекций по курсу <<Компьютерная лингвистика>>},
+    organization = {Университет города Переславль-Залесский},
+    address = {Переславль-Залесский},
+    year = 2005,
+    language = {russian}
+}
+
+@phdthesis{Мозговой:2006,
+    author = {Максименко, О. И.},
+    title = {Машинный семантический анализ русского языка и его применения},
+    type = {Диссертация доктора физико-математических  наук: 05.13.11},
+    school = {Санкт-Петербургский государственный университет},
+    address = {СПб.},
+    year = 2006,
+    language = {russian}
+}
+
+@phdthesis{Максименко:2003,
+    author = {Максименко, О. И.},
+    title = {Формальные методы оценки эффективности систем автоматической обработки текста},
+    type = {Диссертация доктора филологических наук: 10.02.21},
+    school = {Москва},
+    address = {М.},
+    year = 2003,
+    language = {russian}
+}
+
+@phdthesis{Хорошилов:2006,
+    author = {Хорошилов, A. A.},
+    title = {Теоретические основы и методы построения систем фразеологического машинного перевода},
+    type = {Диссертация доктора технических наук: 05.13.17},
+    school = {Москва},
+    address = {М.},
+    year = 2006,
+    language = {russian}
+}
+
+################################################################################
+#####
+##### ЭКОНОМИЧЕСКАЯ ЧАСТЬ
+#####
+################################################################################
+
+@book{Вдовин:2006,
+    author = {Вдовин, В. А. and Дегтярев, А. В. and Оганов, В. А.},
+    title = {Экономическая эффективность разработки информационных систем и технологий},
+    type = {Учебное пособие},
+    editor = {Дегтярева, А.В.},
+    address = {М.},
+    organization = {МАИ},
+    publisher = {Доброе Слово},
+    year = 2006,
+    language = {russian}
+}
+
+%% --- 102 с.: ил.
+@book{Ковалев:2007, 
+    author = {Ковалев, А. М. and Ковалев, В. А.},
+    title = {Основы управления проектами в области информационных технологий},
+    type = {Учебное пособие},
+    editor = {Дегтярева, А.В.},
+    address = {М.},
+    organization = {МАИ},
+    publisher = {Доброе Слово},
+    year = 2007,
+    language = {russian}
+}
+
+@book{Моисеева:2002,
+    author = {Моисеева, Н. К. and Конышева, М. В.},
+    title = {Управление маркетингом: теория, практика, информационные технологии},
+    address = {М.},
+    publisher = {Финансы и статистика},
+    year = 2002,
+    language = {russian}
+}
+
+@book{Ньюэл:2002,
+    author = {Ньюэл, М. В.},
+    title = {Управление проектами для профессионалов. Руководство к сдаче сертификационных экзаменов},
+    type = {Пер. с англ. М.: Кудиц-Пресс},
+    address = {М.},
+    publisher = {Кудиц-Пресс},
+    year = 2008,
+    language = {russian}
+}
+
+################################################################################
+#####
+##### ОХРАНА ТРУДА
+#####
+################################################################################
+
+@book{Бобков:1995,
+    author = {Бобков, Н. И. and Голованова, Т. В.},
+    title = {Охрана труда на ВЦ},
+    type = {Методические указания к дипломному проектированию},
+    address = {М.},
+    publisher = {Изд-во МАИ},
+    year = 1995,
+    language = {russian}
+}
+
+@book{Дайнов:1998,
+    author = {Дайнов, М. И. and Малько, Л. И. and Яров, В. М.},
+    title = {Борьба с шумами и вибрацией в авиационной промышленности},
+    type = {Методические указания к дипломному проектированию},
+    address = {М.},
+    publisher = {Изд-во МАИ},
+    year = 1998,
+    language = {russian}
+}
+
+@book{Березин:2003,
+    author = {Березин, В. М. and Дайнов, М. И.},
+    title = {Защита от вредных производственных факторов при работе с ПЭВМ},
+    type = {Учебное пособие},
+    address = {М.},
+    publisher = {Изд-во МАИ},
+    year = 2003,
+    language = {russian}
+}
+
+@book{Дайнов:2001,
+    author = {Дайнов, М.И. and Метечко, Л.Б. and Толоконникова, В.В.},
+    title = {Методические указания к дипломному проектированию <<Экологические платежи за загрязнение окружающей природной среды>>},
+    type = {Учебное пособие},
+    address = {М.},
+    publisher = {Изд-во МАИ},
+    year = 2001,
+    language = {russian}
+}
+
+################################################################################
+#####
+##### ЛИНГВИСТИЧЕСКАЯ ЧАСТЬ
+#####
+################################################################################
+
+
+@book{Smith:1990,
+    author = {Smith, P. D.},
+    title = {An Introduction to Text Processing},
+    type = {An Analysis and Review},
+    address = {Cambridge, MA: },
+    publisher = {The MIT Press},
+    year = 1990,
+    language = {english}
+}
+
+@book{Sparck:1995,
+    author = {Sparck, J. K. and Galliers, J. R. },
+    title = {Evaluating Natural Language Processing Systems},
+    type = {An Analysis and Review},
+    address = {Berlin},
+    publisher = {Springer},
+    year = 1995,
+    language = {english}
+}
+
+@book{Stone:1998,
+    author = {Stone, M. L.},
+    title = {Web embraces language translation},
+    publisher = {ZDNN},
+    year = 1998,
+    language = {english}
+}
+
+@inproceedings{Sumita:1991,
+    booktitle = {In Proceedings of the 29th Annual Conference of the ACL},
+    author = {Sumita, Y. and Iida, H.},
+    title = {Experiments and prospects of example-based machine translation},
+    address = {Berkley},
+    publisher = {CA},
+    year = 1991,
+    language = {english}
+}
+
+@book{Wilks:2009,
+    author = {Wilks, Y.},
+    title = {Machine Translation, Its Scope and Limits},
+    address = {New York},
+    publisher = {Springer Science+Business Media LLC},
+    year = 2009,
+    language = {english}
+}
+
+@book{Анисимов:1991,
+    author = {Анисимов, А. В.},
+    title = {Компьютерная Лингвистика для Всех. Мифы. Алгоритмы. Язык},
+    editor = {Глушко, М. М.},
+    address = {Киев},
+    publisher = {Наукова думка},
+    year = 1991,
+    language = {russian}
+}
+
+@book{Ахманова:1987,
+    author = {Ахманова, Г. И. and Богомолова, О. И. },
+    title = {Теория и практика английской научной речи},
+    editor = {Глушко, М. М.},
+    address = {М.},
+    publisher = {Изд. МГУ},
+    year = 1987,
+    language = {russian}
+}
+
+@book{Белоногов:2004,
+    author = {Белоногов, Г. Г.},
+    title = {Компьютерная лингвистика и перспективные информационные технологии},
+    address = {М.},
+    publisher = {Русский мир},
+    year = 2004,
+    language = {russian}
+}
+
+@book{Ершов:1986,
+    author = {Ершов, A. П.},
+    title = {Машинный фонд русского языка: внешняя постановка},
+    type = {Машинный фонд русского языка: идеи и суждения},
+    address = {М.},
+    publisher = {Наука},
+    year = 1986,
+    language = {russian}
+}
+
+@book{Караулов:1986,
+    author = {Караулов, Ю. Н. },
+    title = {Методология лингвистического исследования и машинный фонд русского языка},
+    type = {Машинный фонд русского языка: идеи и суждения},
+    address = {М.},
+    publisher = {Наука},
+    year = 1986,
+    language = {russian}
+}
+
+@book{Караулов:1982,
+    author = {Караулов, Ю. Н.},
+    title = {Анализ метаязыка словаря с помощью ЭВМ},
+    address = {М.},
+    publisher = {Наука},
+    year = 1982,
+    language = {russian}
+}
+
+@book{Кнут:2002,
+    author = {Кнут, Д.},
+    title = {Искусство программирования},
+    volume = {Том 1. Основные алгоритмы},
+    edition = {3-е издание, исправленное и дополненное},
+    address = {М.},
+    publisher = {Вильямс},
+    year = 2002,
+    language = {russian}
+}
+
+@book{Комиссаров:1990,
+    author = {Комиссаров, В. Н. and Коралова, А. Л.},
+    title = {Практикум по переводу с английского языка на русский},
+    address = {М.},
+    publisher = {Высшая школа},
+    year = 1990,
+    language = {russian}
+}
+
+@book{Марчук:2000,
+    author = {Марчук, Ю. Н.},
+    title = {Основы компьютерной лингвистики},
+    type = {Учебное пособие},
+    edition = {Издание 2-е дополненное},
+    address = {М.},
+    organization={МПУ},
+    publisher = {Изд-во <<Народный учитель>>},
+    year = 2000,
+    language = {russian}
+}
+
+@book{Мельчук:1974,
+    author = {Мельчук, И. A.},
+    title = {Опыт теории лингвистических моделей <<смысл-текст>>},
+    address = {М.},
+    publisher = {Наука},
+    year = 1974,
+    language = {russian}
+}
+
+@book{Мельчук:1995,
+    author = {Мельчук, И. A.},
+    title = {Русский язык в модели <<смысл-текст>>},
+    address = {Москва-Вена},
+    organization = {Школа: <<Языки русской культуры>>},
+    year = 1995,
+    language = {russian}
+}
+
+
+@book{Нелюбин:1991,
+    author = {Нелюбин, Л. Л.},
+    title = {Компьютерная лингвистика и машинный перевод },
+    type = {Методическое пособие},
+    address = {М.},
+    organization = {Всесоюзный центр переводов},
+    year = 1991,
+    language = {russian}
+}
+
+@book{Нелюбин:1983,
+    author = {Нелюбин, Л. Л.},
+    title = {Перевод и прикладная лингвистика},
+    address = {М.},
+    publisher = {Высшая школа},
+    year = 1983,
+    language = {russian}
+}
+
+@book{Пиотровский:1975,
+    author = {Пиотровский, Р. Г.},
+    title = {Текст, машина, человек},
+    address = {Л.},
+    publisher = {Наука},
+    year = 1975,
+    language = {russian}
+}
+
+@book{Пумпянский:2001,
+    author = {Пумпянский, A. Л.},
+    title = {Информационная роль порядка слов в научной и технической литературе},
+    address = {Мн.},
+    publisher = {ТетраСистемс},
+    year = 2001,
+    language = {russian}
+}
+
+@book{Рассел-Норвиг:2006,
+    author = {Рассел, С. and Норвиг, П.},
+    title = {Искусственный интеллект: современный подход},
+    type = {Пер. с англ.},
+    edition = {2-е изд.},
+    address = {М.},
+    publisher = {Издательский дом <<Вильямc>>},
+    year = 2006,
+    language = {russian}
+}
+
+@phdthesis{Рахимбердиев:2003,
+    author = {Рахимбердиев, Б. Н.},
+    title = {Эволюция семантики экономической терминологии русского языка в XX веке},
+    type = {Диссертация канд. филологических наук :10.02.21},
+    school = {Москва},
+    address = {М.},
+    year = 2003,
+    language = {russian}
+}
+
+@book{Реформатский:1996,
+    author = {Реформатский, A. A.},
+    title = {Введение в языковедение},
+    editor= {Виноградов, В. A.},
+    address = {М.},
+    publisher = {Аспект Пресс},
+    year = 1996,
+    language = {russian}
+}
+
+@book{Рецкер:1950,
+    author = {Рецкер, Я. И.},
+    title = {О закономерных соответствиях при переводе на родной язык},
+    type = {Теория и методика учебного перевода},
+    address = {М.},
+    publisher = {Наука},
+    year = 1950,
+    language = {russian}
+}
+
+@book{Рецкер:2004,
+    author = {Рецкер, Я. И.},
+    title = {Теория перевода и переводческая практика},
+    type = {Очерки лингвистической теории перевода},
+    editor= {Ермолович, Д. И.},
+    address = {М.},
+    publisher = {Р.Валент},
+    year = 2004,
+    language = {russian}
+}
+
+@phdthesis{Хроменков:2000,
+    author = {Хроменков, П. Н.},
+    title = {Анализ и оценка эффективности современных систем машинного перевода},
+    type = {Диссертация канд. филологических наук :10.02.21},
+    school = {Москва},
+    address = {М.},
+    year = 2000,
+    language = {russian}
+}
+
+@book{Швейцер:1988,
+    author = {Швейцер, А. Д.},
+    title = {Теория перевода},
+    address = {М.},
+    publisher = {Наука},
+    year = 1988,
+    language = {russian}
+}
+
+@article{Shannon:1948,
+    journal = {Bell System Technical Journal},
+    author = {Shannon, C.E.},
+    title = {A mathematical theory of communication},
+    volume = {27},
+    pages ={379–423 and 623–656},
+    number = {4},
+    year = 1948,
+    language = {english}
+}

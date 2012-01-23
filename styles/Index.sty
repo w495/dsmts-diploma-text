@@ -1,0 +1,44 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+%%% подключение и настройка прежметного указателя
+%%%
+
+	\usepackage{makeidx}
+
+	% % \renewcommand{\index}[1]{\glossary{#1}}
+
+	\newcommand{\indexHeadLetter}[1]{\indexspace {\Large \Calibri \textcolor{red}{#1}} }
+	
+	\renewcommand{\@idxitem}{\par\hangindent=40pt\hspace*{10pt}}
+	\renewcommand{\subitem}{\par\hangindent=40pt\hspace*{20pt}}
+	\renewcommand{\subsubitem}{\par\hangindent=40pt\hspace*{30pt}}
+	\renewcommand{\indexspace}{\par\vspace{10pt plus 5pt minus 3pt}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+%%% настройка параметров предметного указателя
+%%%
+	
+	\makeindex % указываем для предметного указателя
+	
+	%%
+	%% переопределим окружение предметного указателя
+	%%
+	
+
+	\renewenvironment{theindex}{\@restonecoltrue
+		\if@twocolumn\@restonecolfalse\fi
+		\columnseprule=0pt \columnsep=35pt
+		\twocolumn[ %
+			\cleardoublepage %
+			\phantomsection %
+			%\addcontentsline{toc}{section}{\indexname} %
+			\addcontentsline{toc}{part}{\indexname} %
+			\section*{\indexname} %
+		]%
+		\@mkboth{\uppercase{\indexname}}{\uppercase{\indexname}}%
+		\thispagestyle{plain}\parindent=0pt
+		\setlength{\parskip}{0pt plus .3pt}%
+		\let\item=\@idxitem}%
+		{\if@restonecol \onecolumn \else \clearpage \fi}
+

@@ -1,0 +1,100 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+%%% настройка отображения частей
+%%%
+
+	\usepackage{titlesec}
+	\usepackage[titles]{tocloft}
+	\setcounter{tocdepth}{2}		
+%%%
+%%% Раздел без нумерации
+%%%
+	\newcommand{\Csection}[1]{
+		\cleardoublepage %
+		\phantomsection %
+		\addcontentsline{toc}{section}{#1} %
+		\section*{#1} %
+	}
+
+%%%
+%%% Надраздел для статей
+%%%
+
+	\newcommand{\supersection}[1]{
+		\cleardoublepage %
+		\phantomsection %
+		\addcontentsline{toc}{part}{#1} %
+		\part*{#1} %
+	}
+
+%%%
+%%% Раздел для статей
+%%%
+
+	\newcommand{\pagesection}[1]{
+			\cleardoublepage %
+			\phantomsection %
+			\stepcounter{section}
+			\addcontentsline{toc}{section}{\arabic{section}. #1} %
+			\begin{center}
+				\ \\
+				\vspace{280pt}
+				{\bfseries\sffamily\raggedright\Huge\MakeUppercase{\arabic{section}. #1}}
+			\end{center} %
+			\pagebreak
+	}
+		
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+%%% Отступы в оглавлении
+%%%
+
+
+
+	\titleformat{\section}[block]{\bfseries\LARGE\sffamily\raggedright}
+		{\arabic{section}.}{1ex}{\MakeUppercase}{}
+		
+	\titleformat{\subsection}[block]{\bfseries\LARGE\sffamily\raggedright}
+		{\arabic{section}.\arabic{subsection}.}{1ex}{\MakeUppercase}{}
+		
+	\titleformat{\subsubsection}[block]{\bfseries\Large\sffamily\raggedright}
+		{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.}{1ex}{\MakeUppercase}{}
+		
+	\titleformat{\paragraph}[block]{\bfseries\large\sffamily\raggedright}
+			{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.}{1ex}{\MakeUppercase}{}
+
+	\titleformat{\subparagraph}[block]{\bfseries\normalsize\sffamily\raggedright}
+		{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.}{1ex}{\MakeUppercase}{}
+
+	\titlespacing*{\section}      	{0pt}{3.50ex plus 1ex minus .2ex}{2.3ex plus .2ex}	
+	\titlespacing*{\subsection}   	{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+	\titlespacing*{\subsubsection}	{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+	\titlespacing*{\paragraph}		{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}	
+	\titlespacing*{\subparagraph}	{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}	
+				
+	\renewcommand{\cftsecleader}{\bfseries\cftdotfill{\cftdotsep}}
+	\renewcommand{\cftsecaftersnum}{.}
+	\renewcommand{\cftsubsecaftersnum}{.}
+	
+	\newlength{\zyvseclen}
+	\settowidth{\zyvseclen}{\bfseries\cftsecpresnum\cftsecaftersnum}
+	\addtolength{\zyvseclen}{2mm}
+	\addtolength{\cftsecnumwidth}{\zyvseclen}
+	
+	\renewcommand{\thesection}{\arabic{section}}
+	\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+	\renewcommand{\thesubsubsection}
+		{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
+	
+
+	\newcounter{theappsection}
+		\newcommand{\appsectionname}{Приложение \arabic{theappsection}}
+		\newcommand{\appsection}[1]{
+			\titleformat{name=\section,numberless}[block]{\bfseries\LARGE\sffamily\raggedleft}
+				{}{1ex}{\MakeUppercase}{}
+			\stepcounter{theappsection}
+			\cleardoublepage %
+			\phantomsection %
+			\addcontentsline{toc}{section}{\appsectionname. #1} %
+			\section*{\appsectionname. #1} %
+		}

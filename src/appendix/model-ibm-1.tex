@@ -1,0 +1,51 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+%%% Приложение
+%%%
+
+
+\appsection{Модель IBM 1}
+
+\newcommand{\Com}[1]{{\color[rgb]{0,0.5,0} \itshape \ \Comment #1 }}
+
+{ % \footnotesize\sffamily
+\begin{codebox}
+	\Procname{Обучить-Модель-IBM-1 ($t(\WE|\WR)$, $\TE$, $\TR$)}
+	\li 	$\forall \ \WE \in \SE \in \TE $ \Do 	
+	\li 		$\forall \WR \in \SR \in \TR $ \Do 
+	\li 			$ t(\WE|\WR) \gets u, u \in \mathbb{R}$;
+				\End	
+			\End	
+	\li 	\Com{ Инициализируем таблицу $t(\WE|\WR)$ одинаковыми значениями.}
+	\li 	\Пока {не сойдется} \Do 
+	\li 		$\forall \ \WE \in \SE \in \TE $ \Do \Com{ Инициализируем остальные таблицы.}
+	\li 			$\forall \WR \in \SR \in \TR $ \Do 
+	\li 				$ counts(\WE|\WR) \gets  0$;  $\quad total(\WR) \gets  0$;
+					\End	
+				\End	
+	\li 		$\forall \ \SE, \SR \in \TE, \TR$ \Do \Com{ Вычисляем нормализациию. }
+	\li 			$\forall \ \WE \in \SE$ \Do
+	\li 				$stotal(\WE) \gets  0$;
+	\li 				$\forall \ \WR \in \SR$ \Do	 
+	\li 					$stotal(\WE) \gets stotal(\WE) + t(\WE|\WR)$;
+	 					\End	
+	 				\End	
+	\li 			$\forall \ \WE \in \SE$ \Do \Com{ Собираем подсчеты. }
+	\li 				$\forall \ \WR \in \SR$ \Do	 
+	\li 					$counts(\WE|\WR) \gets counts(\WE|\WR) + \dfrac{t(\WE|\WR)}{stotal(\WE)}$;
+	\li 					$total(\WR) \gets total(\WR) + \dfrac{t(\WE|\WR)}{stotal(\WE)}$;
+		 				\End	
+					\End
+				\End
+	\li 		$\forall \ \WE \in \SE \in \TE $ \Do \Com{ Оцениваем вероятность.}
+	\li 			$\forall \WR \in \SR \in \TR $ \Do 
+	\li 				$ t(\WE|\WR) \gets \dfrac{counts(\WE|\WR)}{total(\WR)}$;
+					\End	
+				\End	
+	\li		\End
+\end{codebox}
+}
+
+
+\pagebreak
+

@@ -1,0 +1,9 @@
+% Низкоуровневые команды
+headings_flag 1
+deiim_0 " "
+deiim_1 " "
+deiim_2 " "
+preamble "\\begin{small}\\begin{theindex}\n "
+postamble "\n\n\\end{theindex}\\end{small}\n "
+heading_prefix "{\\normalsize \\color{red} "
+heading_suffix "}"

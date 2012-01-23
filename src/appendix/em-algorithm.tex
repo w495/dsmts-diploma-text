@@ -1,0 +1,92 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+%%% Приложение
+%%%
+
+
+\appsection{EM алгоритм}
+
+EM-алгоритм (expectation-maximization) - алгоритм, используемый в~математической 
+статистике для~нахождения оценок максимального правдоподобия параметров вероятностных моделей, 
+в~случае, когда модель зависит от некоторых скрытых переменных. 
+Каждая итерация алгоритма состоит из двух шагов. 
+На E-шаге (expectation) вычисляется ожидаемое значение функции правдоподобия, 
+при~этом скрытые переменные рассматриваются как наблюдаемые. 
+На M-шаге (maximization) вычисляется оценка максимального правдоподобия, 
+таким образом увеличивается ожидаемое правдоподобие, 
+вычисляемое на E-шаге. Затем это значение используется для~E-шага 
+на следующей итерации. Алгоритм выполняется до сходимости. 
+
+\subsection*{Expectation}
+
+\[
+	P(\A | \SE, \SR) = \dfrac{P(\SE, \A| \SR)}
+			{P(\SE, \SR)}
+\]
+Числитель:
+\[
+	P(\SE, \A| \SR)	= \dfrac{\varepsilon}{(\LR + 1)^{\LE}} \prod\limits_{j = 1}^{\LE} t(\WE_{j} | \WR_{\A(j)}) 
+\]
+Знаменатель:
+\[
+	P(\SE, \SR) = \sum\limits_{\A} P(\SE, \A| \SR) = 
+\]\[
+	= \sum\limits_{\A(1) = 0 }^{\LR} \ldots \sum\limits_{\A(\LE) = 0 }^{\LR}
+		\dfrac{\varepsilon}{(\LR + 1)^{\LE}} 
+			\prod\limits_{j = 1}^{\LE} t(\WE_{j} | \WR_{\A(j)}) = 
+\]\[
+	= 	\dfrac{\varepsilon}{(\LR + 1)^{\LE}}
+			\sum\limits_{\A(1) = 0 }^{\LR} \ldots \sum\limits_{\A(\LE) = 0 }^{\LR} 
+				\prod\limits_{j = 1}^{\LE} t(\WE_{j} | \WR_{\A(j)}) = 
+\]\[
+	= 	\dfrac{\varepsilon}{(\LR + 1)^{\LE}}
+			\prod\limits_{j = 1}^{\LE} 
+				\sum\limits_{i = 0 }^{\LR}
+					t(\WE_{j} | \WR_{i}); 
+\]
+Таким образом:
+\[
+	P(\DA | \SE, \SR) = \dfrac{P(\SE, \DA| \SR)}{P(\SE, \SR)} = 	
+		\dfrac
+			{
+				\dfrac{\varepsilon}{(\LR + 1)^{\LE}} 
+					\prod\limits_{j = 1}^{\LE} t(\WE_{j} | \WR_{\A(j)})
+			}
+			{
+				\dfrac{\varepsilon}{(\LR + 1)^{\LE}}
+					\prod\limits_{j = 1}^{\LE} 
+						\sum\limits_{i = 0 }^{\LR}
+							t(\WE_{j} | \WR_{i})
+			};
+\]\[
+	P(\DA | \SE, \SR) = \dfrac{P(\SE, \DA| \SR)}{P(\SE, \SR)} = 	
+			\prod\limits_{j = 1}^{\LE} 
+				\dfrac{t(\WE_{j} | \WR_{\A(j)})}		
+					{\sum\limits_{i = 0 }^{\LR} t(\WE_{j} | \WR_{i})};
+\]
+
+\subsection*{Maximization}
+\[
+	counts(\WE|\WR; \SE, \SR) = \sum\limits_{\A} P(\A | \SE, \SR) 
+		\cdot 
+			\sum\limits_{j = 1}^{\LE} 
+				\delta(\WE, \WE_j) \cdot \delta(\WR, \WR_{\A(j)});
+\]\[
+	counts(\WE|\WR; \SE, \SR) = 
+			\dfrac{t(\WE|\WR)}		
+				{\sum\limits_{j = 1 }^{\LE} t(\WE | \WR_{\A(j)})}
+			\cdot 
+				\sum\limits_{j = 1}^{\LE} 
+					\delta(\WE, \WE_j) 
+			\cdot 
+				\sum\limits_{i = 0}^{\LE} 
+					\delta(\WR, \WR_i);
+\]
+
+\[
+	t(\WE|\WR; \SE, \SR) = \dfrac{\sum\limits_{\SE, \SR} counts(\WE|\WR; \SE, \SR) }
+		{\sum\limits_{\WR} \sum\limits_{\SE, \SR} counts(\WE|\WR; \SE, \SR)};
+\]
+
+\pagebreak
+

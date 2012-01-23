@@ -1,0 +1,79 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+%%% Приложение
+%%%
+
+\appsection{Модель IBM 2}
+
+{ \small
+\begin{codebox}
+	\Procname{Обучить-Модель-IBM-2 ($t(\WE|\WR)$, $\TE$, $\TR$)}
+	\li 	$\forall \ \WE \in \SE \in \TE $ \Do 
+	\li 		$\forall \WR \in \SR \in \TR $ \Do 
+	\li 			$ t(\WE|\WR) \gets u_1, u_1 \in \mathbb{R}$;
+	\li 			$  \alpha(\POSE|\POSR, \LR, \LE) = u_2, u_2 \in \mathbb{R}$;	
+				\End	
+			\End	
+	\li 	\Пока {не сойдется} \Do 
+	\li 		$\forall \ \WE \in \SE \in \TE $ \Do \Com{ Инициализируем остальные таблицы.}
+	\li 			$\forall \WR \in \SR \in \TR $ \Do 
+	\li 			\begin{tabular}{ll}
+							$ counts(\WE|\WR) \gets  0$; & $ total(\WR) \gets  0$;  \\ 
+							$ counts_d(\POSE|\POSR, \LE, \LR) \gets  0$; & $ total_d(\POSR, \LE, \LR) \gets  0$; \\ 
+						\end{tabular} 	
+					\End	
+				\End	
+	\li 		$\forall \ \SE, \SR \in \TE, \TR$ \Do \Com{ Вычисляем нормализациию. }
+	\li 			$\forall \ \WE \in \SE$ \Do
+	\li 				$stotal(\WE) \gets  0$;
+	\li 				$\forall \ \WR \in \SR$ \Do	 
+	\li 					$stotal(\WE) \gets stotal(\WE) + t(\WE|\WR) \cdot  \alpha(\POSE|\POSR, \LR, \LE)$;
+	 					\End	
+	 				\End	
+	\li 			$\forall \ \WE \in \SE$ \Do \Com{ Собираем подсчеты. }
+	\li 				$\forall \ \WR \in \SR$ \Do	 
+	\li 					$ c \gets \dfrac{t(\WE|\WR) \cdot  \alpha(\POSE|\POSR, \LR, \LE)}{stotal(\WE) } $	
+	\li 					$ counts(\WE|\WR) \gets counts(\WE|\WR) + c$;
+	\li 					$ total(\WR) \gets total(\WR) + c$;
+	\li 					$ counts_d(\POSE|\POSR, \LE, \LR) \gets counts_d(\POSE|\POSR, \LE, \LR) + c$;
+	\li 					$ total_d(\POSR, \LE, \LR) \gets total_d(\WR, \LE, \LR) + c$;
+		 				\End	
+					\End
+				\End
+	\li 		сгладить-искажения ($counts_d$ , $total_d$);
+	\li 		$\forall \ \WE \in \SE \in \TE $ \Do 	\Com{ Оцениваем вероятность.}
+	\li 			$\forall \WR \in \SR \in \TR $ \Do 
+	\li 				$ t(\WE|\WR) \gets \dfrac{counts(\WE|\WR)}{total(\WR)}$;
+						\End	
+				\End
+	\li 		$\forall \ (\POSE, \POSR, \LE, \LR) \in  counts_d $ \Do 	
+	\li 			$ \alpha(\POSE|\POSR, \LR, \LE) \gets \dfrac{counts_d(\POSE|\POSR, \LE, \LR)}{total_d(\POSR, \LE, \LR)}$;
+				\End
+	\li		\End
+\end{codebox}
+}
+
+\pagebreak
+
+
+{ % \footnotesize\sffamily
+\begin{codebox}
+	\Procname{cгладить-искажения ($counts_d$ , $total_d$)}
+	\li 		$\lambda \gets 1.0 $ 
+	\li 		$\forall \ (\POSE, \POSR, \LE, \LR) \in  counts_d $ \Do 	
+	\li 			$ v \gets counts_d(\POSE|\POSR, \LE, \LR)$;
+	\li 			\Если ( $0 < v < \lambda)$ \Do 	
+	\li					$\lambda \gets v $;
+					\End
+	\li				$\lambda \gets \dfrac{\lambda}{2}$;
+				\End
+	\li 		$\forall \ (\POSE, \POSR, \LE, \LR) \in  counts_d $ \Do 	
+	\li 			$ counts_d(\POSE|\POSR, \LE, \LR) \gets counts_d(\POSE|\POSR, \LE, \LR) +  \lambda$;
+				\End
+	\li 		$\forall \ (\POSR, \LE, \LR) \in  total_d $ \Do 	
+	\li 			$ total_d(\POSR, \LE, \LR) \gets total_d(\WR, \LE, \LR) \cdot  \LR$;
+	\li			\End
+\end{codebox}
+}
+
+\pagebreak

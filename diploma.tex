@@ -1,0 +1,57 @@
+
+\documentclass[utf8x, 14pt, a4paper,oneside,fleqn]{extarticle}
+
+%% Варианты []:
+% fleqn --- сдвигает формулы влево
+
+%% Варианты {}:
+% book
+% report
+% article
+% letter
+% minimal (???)
+
+\usepackage{styles/init}
+
+
+% подключаем набор стилей
+% там были определены базовые настройки шрифтов
+% и пакетов роботы с графикой и листингами
+
+% При не обходимости шрифты следует переопределить
+% потому что, если в Вашей системе
+% не окажется нужных шрифтов, pdf не соберется
+
+% текущее положение включаемых файлов --- ./src
+
+\hypersetup{
+	pdftitle={Дипломный проект 
+	«Распределенное программно-информационное обеспечение 
+	статистической модели перевода естественных языков»},
+	pdfauthor={Илья w-495 Никитин},
+	pdfcreator={XeTeX + TexMaker + w-495},
+	pdfsubject={Распределенное программно-информационное обеспечение
+	статистической модели перевода естественных языков},
+	pdfproducer={w-495},
+	pdfkeywords={\workpdfkeywords}
+}
+
+\begin{document}
+	\input{src/titlepage} % титульный лист
+	\begin{onehalfspacing}
+		\input{src/about}           % о сборке
+		\input{src/abstract}        % реферат
+		\tableofcontents            % содержание
+		\pagebreak
+		\input{src/abbreviations}   % перечень сокращений
+		\input{src/main}            % основная часть
+		\input{src/evaluation}      % экономическая часть & охрана труда и окружающей среды
+		\input{src/conclusion}      % экономическая часть & охрана труда и окружающей среды
+		\input{src/biblio}          % список использованных источников
+		\input{src/appendix}        % приложения
+	\end{onehalfspacing}
+\end{document}
+
+%%
+%%
+%% 

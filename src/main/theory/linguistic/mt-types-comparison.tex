@@ -1,0 +1,142 @@
+
+\subsubsection{Сравнение различных типов СМП}
+
+\begin{figured}
+	\tikzstyle{rootf} = [draw=yellow!50!black!70,thick,minimum height=1.5cm,minimum width=1.5cm,top color=yellow!20,bottom color=yellow!60!black!20,decorate,decoration={random steps,segment length=3pt,amplitude=1pt}]
+	\tikzstyle{basef-rule} = [rounded rectangle,thick,minimum size=1cm,draw=red!50!black!50,top color=white,bottom color=red!50!black!20,font=\itshape]
+	\tikzstyle{typef-rule-i} = [rectangle,thick,minimum width=3.5cm,minimum height=1.5cm,draw=black!20,top color=white,bottom color=black!10]
+	\tikzstyle{typef-rule-w} = [rectangle,thick,minimum width=3.5cm,minimum height=1.5cm,draw=orange!50!black!50,top color=white,bottom color=orange!50!black!20]
+	\tikzstyle{typef-rule-t} = [rectangle,thick,minimum width=3.5cm,minimum height=1.5cm,draw=magenta!50!black!50,top color=white,bottom color=magenta!50!black!20]
+	\tikzstyle{basef-data} = [rounded rectangle,thick,minimum size=1cm,draw=blue!50!black!50,top color=white,bottom color=blue!50!black!20]
+	\tikzstyle{typef-data-e} = [rectangle,thick,minimum width=3.5cm,minimum height=1.5cm,draw=teal!50!black!50,top color=white,bottom color=teal!50!black!20]
+	\tikzstyle{typef-data-s} = [rectangle,thick,minimum width=3.5cm,minimum height=1.5cm,draw=violet!50!black!50,top color=white,bottom color=violet!50!black!20]
+	\tikzstyle{typef-mixed} = [rectangle,thick,minimum width=3.5cm,minimum height=1.5cm,draw=green!50!black!50,top color=white,bottom color=green!50!black!20]
+	\begin{tikzpicture}[thick, node distance=4.2cm, text height=0.9ex, text depth=.25ex, auto]
+		\node[rootf] (mt) {Машинный перевод};
+		\node[basef-rule,below left of=mt] (rule) {Правила};
+			\node[typef-rule-i,below right of=rule] (inter) {\color{black!20}Интерлингвистические};
+			\node[typef-rule-w,below left of=rule] (words) {Пословные};		
+			\node[typef-rule-t,below of=rule] (trans) {\bfseries Трансферные};
+		\node[basef-data,below right of=mt] (data) {Данные};
+			\node[typef-data-e,below right of=data] (ebmt) {Основанные на примерах};	
+			\node[typef-data-s,below of=data] (smt) {\bfseries Статистические};
+	%	\node[typef-mixed,below left of=smt] (mixed) {\bfseries Смешанные};
+		\path[->, red] (mt) edge (rule);		
+			\path[->, red] (rule) edge (words);
+			\path[->, red] (rule) edge (trans);
+			\path[->, red!20] (rule) edge (inter);
+			%\path[->, red] (trans) edge (mixed);
+		\path[->, blue] (mt) edge (data);
+			\path[->, blue] (data) edge (ebmt);	
+			\path[->, blue] (data) edge (smt);	
+			%\path[->, blue] (smt) edge (mixed);
+	\end{tikzpicture}
+	\fcaption{Классификация систем машинного перевода.}
+\end{figured}
+
+Рассмотрим кратко преимущества и недостатки существующих систем. 
+\paragraph{Системы пословного перевода}
+
+Системы пословного перевода на данный момент используются 
+только для составления подстрочечника, как отмечалось ранее. \\
+Преимущества:
+\begin{itemize}
+	\item  простота;
+	\item  высокая скорость работы;
+	\item  не требовательные к ресурсам.
+\end{itemize}
+Недостатки: 
+\begin{itemize}
+	\item низкое качество перевода.
+\end{itemize}
+Ярких представителей на рынке нет, 
+в данном случае удобнее создавать новую систему под конкретную задачу.
+
+\paragraph{Трансферные системы}
+
+Трансферные системы распространены очень широко. 
+Наиболее известными представителями являются ImTranslator, PROMPT.
+Все подобные системы имеют сходные преимущества и недостатки.\\
+Преимущества:
+\begin{itemize}
+	\item  высокое качество перевода  (при наличие нужных словарей и правил);
+	\item  выбор тематики текста, который повышает качество перевода;
+	\item  возможно уточнение перевода, благодаря внесению изменений в~базу данных переводчика (таким образом, пользователь получает потенциально бесконечное множество терминов, с~которыми можно свободно оперировать, и можно достигнуть «бесконечного» качества перевода).
+\end{itemize}
+Недостатки: 
+\begin{itemize}
+	\item  высокая стоимость и время разработки;
+	\item  для добавления нового языка, приходиться переделывать систему заново;
+	\item  нужна команда квалифицированных лингвистов, для описания каждого исходного и каждого переводного языка;
+	\item  требовательность к ресурсам на этапе составления базы.
+\end{itemize}
+
+\paragraph{Интерлингвистические системы}
+
+Интерлингвистические системы перевода так и 
+не были доведены до~уровня промышленных систем.
+Предполагаемые преимущества:
+\begin{itemize}
+	\item  высокое качество перевода, независимо от выбора языка;
+	\item  выделение смысла из исходного текста происходит один раз и~потом записывается на любой язык, в том числе исходный 
+	(получаем «пересказ текста»);
+	\item  низкая стоимость трудозатрат на добавления нового языка в~систему.
+\end{itemize}
+Недостатки: 
+\begin{itemize}
+	\item  спорность потенциальной возможности;
+	\item  высокая сложность разработки;
+	\item  системы не масштабируются.
+\end{itemize}
+
+\paragraph{СМП, основанные на примерах}
+
+СМП, основанные на примерах, так же не имеют ярких представителей. Существующие прототипы используются в академической среде для иллюстрации самого метода. Часто они поставляются не в виде готового продукта, а в виде набора библиотек:
+Marclator – СМП Дублинского Университета, Cunei ‑ гибридная СМП, основанная на переводе по аналогии и~на~статистическом переводе. \\
+Преимущества:
+\begin{itemize}
+	\item  высокое качество перевода  (при наличие достаточно долгой тренировки системы);
+	\item  хорошо справляется со многими контекстными задачами  (фразовые глаголы);
+	\item  квалифицированные лингвисты не нужны непосредственно для~построения системы, нужны только инженеры;
+	\item  логическая простота устройства;
+	\item  возможно обучение системы во время ее эксплуатации.
+\end{itemize}
+Недостатки: 
+\begin{itemize}
+	\item  для обучения системы нужны большие параллельные корпуса текста, размеченные определенным образом;
+	\item  качество перевода зависит от исходных корпусов;
+	\item  продолжительное время обучения;
+	\item  требовательность к ресурсам на этапе обучения.
+\end{itemize}
+
+\paragraph{ССМП}
+ССМП активно разрабатывались (и~разрабатываются) компанией IBM. 
+Благодаря ее разработкам, были созданы модели перевода IBM Model 1-5. 
+Но наибольшую известность этот метод приобрел благодаря компании Google. 
+Кроме переводчика Google существует еще ряд систем и библиотек, 
+использующих статистический подход. \\
+Преимущества:
+\begin{itemize}
+	\item  высокое качество перевода:
+	\begin{itemize}
+		\item  для фраз, которые целиком помещаются в $n$-граммную модель
+		\item  при наличии достаточно долгой тренировке системы.
+		\item  при наличии качественных корпусов текста;
+	\end{itemize}
+	\item  квалифицированные лингвисты не нужны непосредственно для~построения системы, нужны только инженеры;
+	\item  труд человека минимизирован для создания таких систем;
+	\item  не требуется перестраивать систему при добавлении нового языка;
+	\item  возможно обучение системы во время ее эксплуатации.
+\end{itemize}
+Недостатки: 
+\begin{itemize}
+	\item  для обучения нужны большие параллельные корпуса текста;
+	\item  сложный математический аппарат;
+	\item  качественный перевод возможен только для фраз, которые целиком помещаются в $n$-граммную модель;
+	\item  качество перевода зависит от исходных корпусов;
+	\item  при добавлении нового языка приходится анализировать большие объемы данных;
+	\item  продолжительное время обучения;
+	\item  требовательность к ресурсам на этапе обучения.
+\end{itemize}
+
+\pagebreak

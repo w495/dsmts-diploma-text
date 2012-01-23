@@ -1,0 +1,80 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+%%% подключение таблиц и матриц
+%%%
+	\usepackage{array}
+	\usepackage{longtable}
+	\usepackage{tabularx}
+	\usepackage{multirow}
+
+
+% Here we define the relationships for the counters: normaly we should
+% reset the eq, figure & table counters every chapter
+%\makeatletter
+%	\@addtoreset{equation}{section} % Equation counter
+%	\@addtoreset{figure}{section} % Figure counter
+%	\@addtoreset{table}{section} % Table counter
+%\makeatother
+
+\renewcommand{\thetable}{\arabic{section}.\arabic{table}}
+
+% Russian-styled figure and table captions
+\usepackage[labelsep=period,font=rm]{caption}
+
+\newcommand{\nncaption}[1]{{\captionsetup{justification=raggedleft, singlelinecheck=false}\caption{#1}}}
+\newenvironment{dtable}[1]
+	{
+			\begin{table}[H]
+				\sffamily
+				\begin{center}
+					\nncaption{#1}
+	}
+	{
+				\end{center}
+			\end{table}
+			
+	}
+
+\newenvironment{dsmalltable}[1]
+	{
+		\begin{dtable}{#1}
+			\begin{spacing}{1.2}
+				\begin{footnotesize}
+	}
+	{
+				\end{footnotesize}
+			\end{spacing}
+		\end{dtable}
+	}
+
+\newenvironment{dlongtable}[2]
+	{
+		\begin{center}
+			\begin{sffamily}
+				\begin{longtable}{#1}[H]
+					\begin{flushright}
+						\nncaption{#2}
+					\end{flushright}
+	}
+	{
+				\end{longtable}
+			\end{sffamily}
+		\end{center}
+	}
+
+\newenvironment{dfigure}[1]
+	{
+		\begin{figure}[H]
+			\begin{center} 
+
+	}
+	{
+			\end{center}
+			\caption{Сетевой граф работ и критический путь.}
+		\end{figure}
+	}
+
+
+\DeclareCaptionLabelFormat{continued}{#1 #2~\textit{(продолжение)}}
+
+

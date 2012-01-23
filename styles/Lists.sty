@@ -1,0 +1,28 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+%%% переопределение буллетов для списков
+%%%
+
+	\newcommand\liststyleWWviiiNumiii{%
+		\renewcommand\labelitemi{[F0B7?]}
+		\renewcommand\labelitemii{o}
+		\renewcommand\labelitemiii{[F0A7?]}
+		\renewcommand\labelitemiv{[F0B7?]}
+	}
+	
+	
+	% Compressed lists: compactitem etc.
+	\usepackage{paralist}
+
+
+\newenvironment{foo}{}{}
+\newenvironment{ditemize}
+	{
+		\begin{foo}
+			\renewcommand{\labelenumi}{\alph{enumi})}
+			\begin{enumerate}
+	}
+	{
+			\end{enumerate}
+		\end{foo}			
+	}
